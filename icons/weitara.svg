@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#438363"/><stop offset="1" stop-color="#1d623f"/></linearGradient></defs>
+<style>
+.g{fill:none;stroke:#fff;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.f{fill:#fff}
+.ns{stroke:none}
+.fb{transform-box:fill-box;transform-origin:center}
+.bug{animation:bug 4.4s ease-in-out infinite}
+.halo{transform-box:fill-box;transform-origin:center;animation:halo 2.8s ease-in-out infinite}
+.belly{animation:belly 2.8s ease-in-out infinite}
+.wing{transform-box:fill-box;animation:wing 4.4s ease-in-out infinite}
+.wl{transform-origin:100% 50%}.wr{transform-origin:0% 50%}
+@keyframes bug{50%{transform:translateY(-.6px)}}
+@keyframes halo{0%,100%{transform:scale(.85);opacity:.12}50%{transform:scale(1.08);opacity:.42}}
+@keyframes belly{0%,100%{fill:#FDE68A}50%{fill:#FEF3C7}}
+@keyframes wing{0%,60%,72%,84%,100%{transform:scaleY(1)}66%,78%{transform:scaleY(.7)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect width="128" height="128" rx="30" fill="url(#bg)"/>
+<rect x="1" y="1" width="126" height="126" rx="29" fill="none" stroke="#fff" stroke-opacity=".14" stroke-width="2"/>
+<g class="g" transform="translate(26 26) scale(3.1667)">
+<g class="bug">
+<g fill="#fff" fill-opacity=".26" stroke-width="1.4">
+<g class="wing wl"><ellipse cx="7.2" cy="11.6" rx="3.7" ry="1.9" transform="rotate(28 7.2 11.6)"/></g>
+<g class="wing wr"><ellipse cx="16.8" cy="11.6" rx="3.7" ry="1.9" transform="rotate(-28 16.8 11.6)"/></g>
+<g class="wing wl"><ellipse cx="8.1" cy="16.7" rx="2.5" ry="1.3" transform="rotate(-28 8.1 16.7)"/></g>
+<g class="wing wr"><ellipse cx="15.9" cy="16.7" rx="2.5" ry="1.3" transform="rotate(28 15.9 16.7)"/></g>
+</g>
+<circle class="halo ns" cx="12" cy="16.7" r="5.4" fill="#FDE047"/>
+<circle class="belly" cx="12" cy="16.7" r="3.6" fill="#FDE68A"/>
+<path d="M10.6 5.7c-.4 -1.3 -1.1 -2.2 -2.1 -2.8M13.4 5.7c.4 -1.3 1.1 -2.2 2.1 -2.8"/>
+<circle class="f ns" cx="8.3" cy="2.8" r=".9"/>
+<circle class="f ns" cx="15.7" cy="2.8" r=".9"/>
+<circle cx="12" cy="8.7" r="3.3"/>
+<circle class="f ns" cx="10.75" cy="8.5" r=".6"/>
+<circle class="f ns" cx="13.25" cy="8.5" r=".6"/>
+<path d="M11.1 10.1q.9 .7 1.8 0" stroke-width=".9"/>
+</g>
+</g>
+</svg>

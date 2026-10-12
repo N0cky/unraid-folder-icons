@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3d3d3f"/><stop offset="1" stop-color="#161619"/></linearGradient></defs>
+<style>
+.g{fill:none;stroke:#fff;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.f{fill:#fff}
+.ns{stroke:none}
+.fb{transform-box:fill-box;transform-origin:center}
+.flash{animation:flash 6s ease-out infinite}
+.glint{animation:glint 6s ease-out infinite}
+.spark{transform-box:fill-box;transform-origin:center;animation:spark 6s ease-out infinite}
+@keyframes flash{0%,84%,100%{opacity:0}87%{opacity:.13}}
+@keyframes glint{0%,84%,100%{opacity:.15}87%{opacity:.9}}
+@keyframes spark{0%,83%,100%{opacity:0;transform:scale(.4)}87%{opacity:1;transform:scale(1.1)}95%{opacity:0;transform:scale(.8)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect width="128" height="128" rx="30" fill="url(#bg)"/>
+<rect x="1" y="1" width="126" height="126" rx="29" fill="none" stroke="#fff" stroke-opacity=".14" stroke-width="2"/>
+<rect class="flash" width="128" height="128" rx="30" fill="#fff" opacity="0"/>
+<g class="g" transform="translate(26 26) scale(3.1667)">
+<path d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2"/>
+<path d="M9 13a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"/>
+<circle class="f ns glint" cx="12" cy="13" r="1.4"/>
+<path class="f spark" d="M19.4 1.6l.45 1.25l1.25 .45l-1.25 .45l-.45 1.25l-.45 -1.25l-1.25 -.45l1.25 -.45z" stroke="#fff" stroke-width=".5"/>
+</g>
+</svg>

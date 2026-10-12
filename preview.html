@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unraid Folder Icons</title>
+<style>
+  :root { --bg: #f2f2f2; --row: #fff; --row-alt: #f7f7f7; --text: #1c1b1b; --muted: #6b6b6b; --border: #e3e3e3; }
+  body { margin: 0; padding: 24px 16px 48px; background: var(--bg); color: var(--text); font: 13px/1.4 "clear-sans", "Segoe UI", system-ui, sans-serif; }
+  h1 { font-size: 18px; font-weight: 600; margin: 0 0 4px; }
+  p.sub { color: var(--muted); margin: 0 0 20px; }
+  .wrap { max-width: 1100px; margin: 0 auto; }
+  .panel { border-radius: 8px; overflow: hidden; border: 1px solid var(--border); margin-bottom: 28px; }
+  .row { display: flex; align-items: center; gap: 14px; padding: 8px 14px; background: var(--row); }
+  .row:nth-child(even) { background: var(--row-alt); }
+  .row img { width: 48px; height: 48px; flex: none; }
+  .name { color: #486dba; font-weight: 600; }
+  .state { color: var(--muted); font-size: 12px; }
+  .state::before { content: "\25B6"; color: #3c9c3c; margin-right: 5px; font-size: 10px; }
+  .dark { --row: #1c1b1b; --row-alt: #232222; --text: #e6e6e6; --muted: #9a9a9a; --border: #333; color: var(--text); }
+  .dark .name { color: #7fa2e8; }
+  .big { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 18px; }
+  .big figure { margin: 0; text-align: center; }
+  .big img { width: 112px; height: 112px; }
+  .big figcaption { margin-top: 6px; color: var(--muted); }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 760px) { .cols { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Unraid Folder Icons</h1>
+  <p class="sub">Vorschau in FolderView3-Größe (48&nbsp;px), helles und dunkles Unraid-Theme</p>
+  <div class="cols">
+    <div class="panel" id="light"></div>
+    <div class="panel dark" id="dark"></div>
+  </div>
+  <div class="big" id="big"></div>
+</div>
+<script>
+  const icons = [
+    ["datenbanken", "Datenbanken", "2/2"],
+    ["netzwerk", "Netzwerk & Zugriff", "6/6"],
+    ["medien", "Plex & Medien", "8/9"],
+    ["downloads", "Downloads & Arr", "10/11"],
+    ["youtube", "YouTube", "3/3"],
+    ["buecher", "Bücher & Hörbücher", "4/4"],
+    ["nextcloud", "Nextcloud", "13/13"],
+    ["buero", "Büro & Finanzen", "5/5"],
+    ["monitoring", "Monitoring & Dashboards", "6/6"],
+    ["bunk-media", "Bunk Media", "5/5"],
+    ["weitara", "Weitara", "3/3"],
+    ["smart-home", "Smart Home & Kameras", "2/2"],
+    ["gaming", "Gaming", "2/2"],
+  ];
+  const row = ([f, n, s]) => `<div class="row"><img src="icons/${f}.svg" alt=""><div><div class="name">${n}</div><div class="state">${s} gestartet</div></div></div>`;
+  document.getElementById("light").innerHTML = icons.map(row).join("");
+  document.getElementById("dark").innerHTML = icons.map(row).join("");
+  document.getElementById("big").innerHTML = icons.map(([f, n]) => `<figure><img src="icons/${f}.svg" alt=""><figcaption>${f}.svg</figcaption></figure>`).join("");
+</script>
+</body>
+</html>

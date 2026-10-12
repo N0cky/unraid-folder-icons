@@ -226,12 +226,29 @@ ICONS = {
 }
 
 
+# Static app icons for containers that have no usable logo anywhere.
+# Unraid caches container icons as PNG, so render these with render_apps.sh.
+APPS = {
+    # parse-dmarc: envelope with a small shield badge
+    "parse-dmarc": ("#2563EB", """
+<path d="M11 19h-6a2 2 0 0 1 -2 -2v-10a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v5"/>
+<path d="M3 7l9 6l9 -6"/>
+<path d="M17.5 12.6c1.2 1 2.6 1.5 4 1.5c.2 3.3 -1.3 5.9 -4 7c-2.7 -1.1 -4.2 -3.7 -4 -7c1.4 0 2.8 -.5 4 -1.5z" stroke-width="1.5"/>
+<path d="M15.9 17.1l1.1 1.1l2.1 -2.1" stroke-width="1.4"/>
+"""),
+}
+
+
 def main() -> None:
     OUT.mkdir(exist_ok=True)
     for name, (color, body, css, *rest) in ICONS.items():
         overlay = rest[0] if rest else ""
         (OUT / f"{name}.svg").write_text(svg(color, body, css, overlay), encoding="utf-8")
-    print(f"{len(ICONS)} icons written to {OUT}")
+    apps = Path(__file__).parent / "apps"
+    apps.mkdir(exist_ok=True)
+    for name, (color, body) in APPS.items():
+        (apps / f"{name}.svg").write_text(svg(color, body), encoding="utf-8")
+    print(f"{len(ICONS)} folder icons and {len(APPS)} app icons written")
 
 
 if __name__ == "__main__":

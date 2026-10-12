@@ -19,6 +19,21 @@ https://cdn.jsdelivr.net/gh/N0cky/unraid-folder-icons@v1.0.0/icons/<name>.svg
 
 Wer `prefers-reduced-motion` aktiviert hat, bekommt die Icons ohne Animation.
 
+## App-Icons
+
+Für Container ohne brauchbares Logo liegen statische App-Icons in [`apps/`](apps/) (SVG + 256 px PNG,
+da Unraid Container-Icons als PNG cached):
+
+| | |
+|:-:|:-:|
+| <img src="apps/parse-dmarc.png" width="64"><br>`parse-dmarc` | |
+
+```
+https://cdn.jsdelivr.net/gh/N0cky/unraid-folder-icons@v1.1.0/apps/<name>.png
+```
+
+PNGs neu rendern: `CHROME=/pfad/zu/chrome ./render_apps.sh`
+
 ## Anpassen
 
 Farben, Symbole und Animationen stehen in [`build.py`](build.py). Nach Änderungen neu erzeugen:

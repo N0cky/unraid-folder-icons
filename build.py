@@ -236,6 +236,19 @@ APPS = {
 <path d="M17.5 12.6c1.2 1 2.6 1.5 4 1.5c.2 3.3 -1.3 5.9 -4 7c-2.7 -1.1 -4.2 -3.7 -4 -7c1.4 0 2.8 -.5 4 -1.5z" stroke-width="1.5"/>
 <path d="M15.9 17.1l1.1 1.1l2.1 -2.1" stroke-width="1.4"/>
 """),
+
+    # nas-backup: two server units with a circular-arrow badge (ntfy/Kuma backup alerts)
+    "nas-backup": ("#0D9488", """
+<path d="M5.5 3h11a2.5 2.5 0 0 1 2.5 2.5v2a2.5 2.5 0 0 1 -2.5 2.5h-11a2.5 2.5 0 0 1 -2.5 -2.5v-2a2.5 2.5 0 0 1 2.5 -2.5z"/>
+<path d="M12.5 19h-7a2.5 2.5 0 0 1 -2.5 -2.5v-2a2.5 2.5 0 0 1 2.5 -2.5h11a2.5 2.5 0 0 1 2.4 1.8"/>
+<circle class="f ns" cx="6.5" cy="6.5" r=".9"/>
+<circle class="f ns" cx="6.5" cy="15.5" r=".9"/>
+<path d="M10 6.5h5.5" stroke-opacity=".55"/>
+<g transform="translate(18 18) scale(.45) translate(-12 -12)" stroke-width="3.6">
+<path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4"/>
+<path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"/>
+</g>
+"""),
 }
 
 

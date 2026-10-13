@@ -21,15 +21,15 @@ Wer `prefers-reduced-motion` aktiviert hat, bekommt die Icons ohne Animation.
 
 ## App-Icons
 
-Für Container ohne brauchbares Logo liegen statische App-Icons in [`apps/`](apps/) (SVG + 256 px PNG,
-da Unraid Container-Icons als PNG cached):
+Für Container ohne brauchbares Logo und für Benachrichtigungen (z. B. ntfy) liegen statische
+App-Icons in [`apps/`](apps/) (SVG + 256 px PNG, da Unraid Container-Icons als PNG cached):
 
 | | |
 |:-:|:-:|
-| <img src="apps/parse-dmarc.png" width="64"><br>`parse-dmarc` | |
+| <img src="apps/parse-dmarc.png" width="64"><br>`parse-dmarc` | <img src="apps/nas-backup.png" width="64"><br>`nas-backup` |
 
 ```
-https://cdn.jsdelivr.net/gh/N0cky/unraid-folder-icons@v1.1.0/apps/<name>.png
+https://cdn.jsdelivr.net/gh/N0cky/unraid-folder-icons@v1.2.0/apps/<name>.png
 ```
 
 PNGs neu rendern: `CHROME=/pfad/zu/chrome ./render_apps.sh`

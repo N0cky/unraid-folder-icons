@@ -223,6 +223,27 @@ ICONS = {
 @keyframes pad{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
 @keyframes btn{0%{opacity:1}50%{opacity:.3}}
 """),
+
+    # Backup: server units with blinking LEDs, the sync badge turns once and pauses
+    "backup": ("#0D9488", """
+<path d="M5.5 3h11a2.5 2.5 0 0 1 2.5 2.5v2a2.5 2.5 0 0 1 -2.5 2.5h-11a2.5 2.5 0 0 1 -2.5 -2.5v-2a2.5 2.5 0 0 1 2.5 -2.5z"/>
+<path d="M12.5 19h-7a2.5 2.5 0 0 1 -2.5 -2.5v-2a2.5 2.5 0 0 1 2.5 -2.5h11a2.5 2.5 0 0 1 2.4 1.8"/>
+<circle class="f ns led l1" cx="6.5" cy="6.5" r=".9"/>
+<circle class="f ns led l2" cx="6.5" cy="15.5" r=".9"/>
+<path d="M10 6.5h5.5" stroke-opacity=".55"/>
+<g transform="translate(18 18) scale(.45) translate(-12 -12)" stroke-width="3.6">
+<g class="sync">
+<path d="M20 11a8.1 8.1 0 0 0 -15.5 -2m-.5 -4v4h4"/>
+<path d="M4 13a8.1 8.1 0 0 0 15.5 2m.5 4v-4h-4"/>
+</g>
+</g>
+""", """
+.led{animation:led 2.8s ease-in-out infinite}
+.l2{animation-duration:2.1s;animation-delay:-.9s}
+.sync{transform-box:fill-box;transform-origin:center;animation:sync 5s ease-in-out infinite}
+@keyframes led{0%,22%,48%,100%{opacity:1}10%,60%{opacity:.25}}
+@keyframes sync{0%{transform:rotate(0)}40%,100%{transform:rotate(360deg)}}
+"""),
 }
 
 

@@ -7,14 +7,14 @@ Sie funktionieren deshalb als ganz normales Bild-URL im Icon-Feld eines Ordners.
 | | | | | | | |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | <img src="icons/datenbanken.svg" width="64"><br>`datenbanken` | <img src="icons/netzwerk.svg" width="64"><br>`netzwerk` | <img src="icons/medien.svg" width="64"><br>`medien` | <img src="icons/downloads.svg" width="64"><br>`downloads` | <img src="icons/youtube.svg" width="64"><br>`youtube` | <img src="icons/buecher.svg" width="64"><br>`buecher` | <img src="icons/nextcloud.svg" width="64"><br>`nextcloud` |
-| <img src="icons/buero.svg" width="64"><br>`buero` | <img src="icons/monitoring.svg" width="64"><br>`monitoring` | <img src="icons/bunk-media.svg" width="64"><br>`bunk-media` | <img src="icons/weitara.svg" width="64"><br>`weitara` | <img src="icons/smart-home.svg" width="64"><br>`smart-home` | <img src="icons/gaming.svg" width="64"><br>`gaming` | |
+| <img src="icons/buero.svg" width="64"><br>`buero` | <img src="icons/monitoring.svg" width="64"><br>`monitoring` | <img src="icons/bunk-media.svg" width="64"><br>`bunk-media` | <img src="icons/weitara.svg" width="64"><br>`weitara` | <img src="icons/smart-home.svg" width="64"><br>`smart-home` | <img src="icons/gaming.svg" width="64"><br>`gaming` | <img src="icons/backup.svg" width="64"><br>`backup` |
 
 ## Verwendung
 
 In FolderView3 beim Ordner als Icon eintragen (feste Version, damit sich nichts unbemerkt ändert):
 
 ```
-https://cdn.jsdelivr.net/gh/N0cky/unraid-folder-icons@v1.0.0/icons/<name>.svg
+https://cdn.jsdelivr.net/gh/N0cky/unraid-folder-icons@v1.3.0/icons/<name>.svg
 ```
 
 Wer `prefers-reduced-motion` aktiviert hat, bekommt die Icons ohne Animation.
